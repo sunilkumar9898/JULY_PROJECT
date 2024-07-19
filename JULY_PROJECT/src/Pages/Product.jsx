@@ -57,10 +57,10 @@ const Product = () => {
     return (
         <div className="box">
             <ToastContainer />
-            <div className=" grid w-100 m-auto ">
+            <div className=" grid w-100  ">
                 {data.map((ele) => {
                     return (
-                        <div className=" px-2 card p-2 mx-auto ">
+                        <div className=" px-2 card p-2 mx-auto griddiv ">
                             <img src={ele.image} alt="" />
                             <p className="pt-4">{`${
                                 ele.name ? ele.name.slice(1, 25) : null

@@ -91,7 +91,7 @@ const Navbar = () => {
         <div>
             <nav className="d-flex navbar1 justify-content-between align-items-center px-5 position-sticky sticky-top bg-primary text-white p-2">
                 <div className="hemburger-icon ">
-                <span>&#9776;</span>
+                    <span>&#9776;</span>
                 </div>
                 <div className="d-inline-flex w-50 justify-content-between cursor-pointer nav_link">
                     <Link to={"/"} smooth={true} duration={500}>
@@ -103,7 +103,7 @@ const Navbar = () => {
                     <Link to={"/contact"} smooth={true} duration={500}>
                         Contact
                     </Link>
-                    <Link to={"/service"} smooth={true} duration={500}>
+                    <Link to={"/"} smooth={true} duration={500}>
                         Service
                     </Link>
                 </div>
@@ -111,7 +111,7 @@ const Navbar = () => {
                     <div className="">
                         <div className="d-flex align-items-center gap-2">
                             <InputText
-                                style={{ height: "40px", color:"black" }}
+                                style={{ height: "40px", color: "black" }}
                                 placeholder="Search "
                                 type="text"
                                 className=" bg-none px-2 inputsearch"
@@ -136,6 +136,11 @@ const Navbar = () => {
             <section>
                 <div className="container-fluid">
                     <Element name="/">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <Gallery />
+                        </div>
+                    </Element>
+                    <Element name="/about">
                         <div data-aos="zoom-in" data-aos-delay="100">
                             <Product />
                         </div>
@@ -145,11 +150,7 @@ const Navbar = () => {
                             <About />
                         </div>
                     </Element>
-                    <Element name="/service">
-                        <div data-aos="fade-up" data-aos-delay="100">
-                            <Gallery />
-                        </div>
-                    </Element>
+
                     <Element name="/contact">
                         <div data-aos="fade-out" data-aos-delay="100">
                             <Contact />

@@ -59,7 +59,7 @@ const Gallery = () => {
                     <img
                         src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
                         alt={product.name}
-                        className="w-6 shadow-2 w-50 carouselimg"
+                        className="w-6 shadow-2 w-50 carouselimg mx-auto"
                     />
                 </div>
                 <div>
@@ -85,14 +85,14 @@ const Gallery = () => {
     };
     return (
         <div className=" box ">
-            <div className=" card  mb-5 mt-5 mb-5">
+            <div className=" card  mb-5  ">
                 <div className="text-center mt-4 text-danger offers">
                     <h1>Super Hours 12AM - 6AM Everday Assentials</h1>
                 </div>
                 <Carousel
                     value={products}
-                    numScroll={4}
-                    numVisible={4}
+                    numScroll={1}
+                    numVisible={2}
                     responsiveOptions={responsiveOptions}
                     itemTemplate={productTemplate}
                 />
