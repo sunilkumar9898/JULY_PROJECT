@@ -30,6 +30,11 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+.nav_link a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: red;
+}
 .box {
     position: relative;
     top: 60px;
@@ -80,6 +85,8 @@ body{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  border: 1px solid rgb(27, 24, 24);
+  border-radius: 5px;
 }
 .contactform h1{
   font-weight: 700;
