@@ -210,7 +210,9 @@ body{
   }
 }
 
-
+.sliderimg img{
+  height: 500px;
+}
 
   .inputsearch{
     width: 300px;
@@ -224,6 +226,10 @@ body{
     margin-left: -40px;
     font-size: 30px;
     padding: 0px 10px;
+
+}
+.sliderimg img{
+  height: 200px;
 }
   .navbar1{
     justify-content: center;
@@ -243,6 +249,9 @@ body{
       font-size: 30px;
     padding: 0px 10px;
     cursor: pointer;
+}
+.sliderimg img{
+  height: 300px;
 }
   .navbar1{
     justify-content: center;

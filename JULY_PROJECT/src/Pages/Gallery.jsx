@@ -10,17 +10,17 @@ const Gallery = () => {
     const responsiveOptions = [
         {
             breakpoint: "1400px",
-            numVisible: 2,
+            numVisible: 1,
             numScroll: 1,
         },
         {
             breakpoint: "1199px",
-            numVisible: 3,
+            numVisible: 1,
             numScroll: 1,
         },
         {
             breakpoint: "767px",
-            numVisible: 2,
+            numVisible: 1,
             numScroll: 1,
         },
         {
@@ -30,21 +30,21 @@ const Gallery = () => {
         },
     ];
 
-    const getSeverity = (product) => {
-        switch (product.inventoryStatus) {
-            case "INSTOCK":
-                return "success";
+    // const getSeverity = (product) => {
+    //     switch (product.inventoryStatus) {
+    //         case "INSTOCK":
+    //             return "success";
 
-            case "LOWSTOCK":
-                return "warning";
+    //         case "LOWSTOCK":
+    //             return "warning";
 
-            case "OUTOFSTOCK":
-                return "danger";
+    //         case "OUTOFSTOCK":
+    //             return "danger";
 
-            default:
-                return null;
-        }
-    };
+    //         default:
+    //             return null;
+    //     }
+    // };
 
     useEffect(() => {
         Data1.getProductsSmall().then((Data1) =>
@@ -54,15 +54,15 @@ const Gallery = () => {
 
     const productTemplate = (product) => {
         return (
-            <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
-                <div className="mb-3">
+            <div className="   text-center  px-3">
+                <div className="mb-3 sliderimg">
                     <img
-                        src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
+                        src={`${product.image}`}
                         alt={product.name}
-                        className="w-6 shadow-2 w-50 carouselimg mx-auto"
+                        className="  w-100 carouselimg mx-auto "
                     />
                 </div>
-                <div>
+                {/* <div>
                     <h4 className="mb-1">{product.name}</h4>
                     <h6 className="mt-0 ">${product.price}</h6>
                     <Tag
@@ -78,21 +78,21 @@ const Gallery = () => {
                             icon="pi pi-star-fill"
                             className="p-button-success p-button-rounded"
                         />
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
             </div>
         );
     };
     return (
         <div className=" box ">
-            <div className=" card  mb-5  ">
-                <div className="text-center mt-4 text-danger offers">
+            <div className="   mb-5  ">
+                <div className="text-center mt-0 text-danger offers">
                     <h1>Super Hours 12AM - 6AM Everday Assentials</h1>
                 </div>
                 <Carousel
                     value={products}
                     numScroll={1}
-                    numVisible={2}
+                    numVisible={1}
                     responsiveOptions={responsiveOptions}
                     itemTemplate={productTemplate}
                 />
